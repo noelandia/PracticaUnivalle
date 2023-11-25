@@ -6,7 +6,7 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-image: url('img/FondoCelular.jpg');
+    background-image: url('img/FondoCelular3.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -18,10 +18,21 @@ body{
 }
 .foto{
     background-color: rgba(255, 255, 255, 0.8);
-    padding: 20px;
+    padding: 0;
     border-radius: 10px;
     text-align: center;
     margin-top: 4rem;
+    border: 2px solid rgb(3, 3, 3);
+    background-color: #000000;
+    box-shadow: 2px 3px 4px rgb(247, 245, 245);
+    width: 12rem;
+    height: 14rem;
+}
+.foto img{
+    object-fit: cover;
+    width:100%;
+    height:100%;
+    border-radius: 10px;
 }
 section{
     margin-top: 20px;
@@ -40,44 +51,152 @@ section{
 .titulo-contenedor{
     display: flex;
     flex-flow: row nowrap;
+    position: relative;
 }
 .titulo-contenedor img{
     width: 4rem;
     height: 4rem;
-    flex: 0 0 auto;
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 2px solid rgb(3, 3, 3);
+    background-color: #000000;
+    box-shadow: 2px 3px 4px rgb(247, 245, 245);
 }
 .titulo-contenedor div{
-    display: flex;
-    background-color: white;
-    box-shadow: 0 3px 4px gray;
     flex: 0 1 100%;
-    border-top-left-radius: 10%;
-    border-top-right-radius: 60%;
+    height: 2.5rem;
+    font-family: 'Roboto',sans-serif; 
+    color: #131212;
+    font-style: oblique;
+    font-size: 0.6rem;
+    text-align: center;
+    background-image: linear-gradient(330deg, #ffff86 0, #ffff79 10%, #ffff6d 20%, #fff264 30%, #ffd85b 40%, #f2bd53 50%, #dea34c 60%, #cb8c47 70%, #ba7a43 80%, #ab6a40 90%, #9f5d3e 100%);
+    margin: 0 0 25px;
+    padding: 0.5rem; 
+    border-radius: 35px 0px 35px 0px;
+    -webkit-border-radius: 35px 0px 35px 0px; 
+    border: 2px solid #000000;
+    box-shadow: 0 3px 4px rgb(247, 245, 245);
+}
+.titulo-contenedor h2{
+    font-weight: 900;
+}
+.contenido-contenedor{
+    box-shadow: 1px 1px 1px rgb(247, 245, 245);
+    border-radius: 5px;
+}
+.contenido-contenedor p{
+    color: whitesmoke;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    font-size: 1rem;
+    text-align: justify;
+    text-shadow: -2px 0px 5px midnightblue;
+    font-style: italic;
+}
+.contenido-contenedor ul li{
+    display: block;
+    color: whitesmoke;
+    padding: 0.5rem;
+    font-size: 1rem;
+    text-align: justify;
+    text-shadow: -2px 0px 5px midnightblue;
+    font-style: italic;
+    text-decoration: none;
+}
+.contenido-contenedor ul li:hover { 
+    -moz-box-shadow:10px 10px 20px #000000;
+    -webkit-box-shadow:10px 10px 20px #000000;
+    box-shadow:10px 10px 20px #000000; 
+    margin-left: 10px;
 }
 
-@media (min-width: 550px){
-    main > div{
-        flex: 0 1 50%;
+
+@media (min-width: 725px){
+    body{
+        flex-flow: row wrap;
+        align-items: flex-start;
+        background-image: url('img/FondoTablet.jpg');
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .foto{
+        margin-top: 9rem;
+    }
+    .presentacion{
+        margin-top: 20px;
+        display: flex;
+        flex: 0 1 70%;
+    }
+    .titulo-contenedor div{
+        background-image: radial-gradient(circle at 74.18% 116.45%, #9dffff 0, #85ffff 10%, #70ffff 20%, #60ffff 30%, #56ffff 40%, #52eef2 50%, #52d3dd 60%, #53bbc9 70%, #54a6b7 80%, #5595a7 90%, #558799 100%);
+    }
+    .contenido-contenedor p{
+        text-shadow: 1px 1px 2px rgb(10, 233, 222);
+        font-style: italic;
+        font-size: 1.2rem;
+    }
+    .contenido-contenedor ul li{
+        font-size: 1.2rem;
+        text-align: justify;
+        text-shadow: 1px 1px 2px rgb(10, 233, 222);
+        font-style: italic;
+        text-decoration: none;
     }
     h2{
-        color: red;
+        font-size: 1.2rem;
+        color: black;
     }
 }
 
-@media (min-width: 900px){
-    main > div{
-        flex: 0 1 33%;
+@media (min-width: 1013px){
+    .foto{
+        width: 14rem;
+        height: 16rem;
     }
-    h2{
-        color: violet;
+    .presentacion{
+        margin-top: 20px;
+        display: flex;
+        flex: 0 1 75%;
     }
 }
 
 @media (min-width: 1200px){
-    main > div{
-        flex: 0 1 25%;
+    body{
+        background-image: url('img/FondoPC2.jpg');
+    }
+    .foto{
+        margin-top: 9rem;
+        width: 16rem;
+        height: 18rem;
+    }
+    .estudios{
+        margin-top: 20px;
+        display: flex;
+        flex: 0 1 50%;
+    }
+    .trabajos{
+        margin-top: 20px;
+        display: flex;
+        flex: 0 1 50%;
+    }
+    .titulo-contenedor div{
+        background-image: radial-gradient(circle at 74.18% 116.45%, #ffed00 0, #fff200 7.14%, #fff400 14.29%, #f5f300 21.43%, #d3ef00 28.57%, #afe700 35.71%, #89db00 42.86%, #5fcd1f 50%, #2abe2f 57.14%, #00b13b 64.29%, #00a546 71.43%, #009b50 78.57%, #00945b 85.71%, #008e66 92.86%, #008b72 100%);
+    }
+    .contenido-contenedor p{
+        color: beige;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px rgb(214, 130, 5);
+    }
+    .contenido-contenedor ul li{
+        color: beige;
+        font-size: 1.5rem;
+        text-shadow: 1px 1px 2px rgb(214, 130, 5);
     }
     h2{
-        color: blue;
+        font-size: 1.2rem;
+        color: darkgreen;
     }
 }
